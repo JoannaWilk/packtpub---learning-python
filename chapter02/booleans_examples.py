@@ -1,0 +1,16 @@
+# booleans examples
+
+print('int(True): ', int(True))
+print('int(False): ', int(False))
+print('evaluate number in a bol context bool(1): ', bool(1))
+print('evaluate number in a bol context bool(-42): ', bool(-42))
+print('evaluate number in a bol context bool(0): ', bool(0))
+print('------------------------')
+print('not True: ', not True)
+print('not False: ', not False)
+print('True and True: ', True and True)
+print('False or True: ', False or True)
+print('------------------------')
+print('1 + True: ', 1 + True)
+print('False + 42: ', False + 42)
+print('7 - True: ', 7 - True)

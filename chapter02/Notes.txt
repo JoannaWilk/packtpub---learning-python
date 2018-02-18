@@ -1,0 +1,66 @@
+Fabrizio Romano "Learning Python"
+-------------------------------------
+
+
+Guido Van Rossum - Dutch computer scientist and mathematician, creator of Python.
+First Python release: 1991
+Name 'Python' is after British Monty Python group. It is rumored that IDLE name (Integrated DeveLopment Envifonment) is after Erik Idle, one of Monty Python's founders.
+
+
+Chapter 02
+
+In Python, objects are abstraction fordata
+
+[INTERESTING WEBSITE: pythontutor.com]
+
+Mutable objects - the value can change:
+custom objects (mostly)
+
+Immutable objects - the value cannot change:
+numbers
+
+Custom objects are mutable, unsless they are coded not to be.
+
+Integers (int) - unlimited range (only to available virtual memory), can be positive, negative and zero
+Interesting operations:
+* true division which returns quotient of operands
+* integer division which returns floored quotient of operands
+* funcion int() actually truncates a number to an integer, always towards 0
+
+Booleans (bool) - a subclass of integers, behave respectively like 1 and 0. Boolean algebra is that subset of algebra in which the values of the variables are the truth values: true and false (True and False in Python)
+Each non-zero number in boolean context is evaluated as True.
+Zero is evaluated as False.
+There is possibility to add True and False to integers. True is treated as 1 and False as 0 - Python upcast them as integers.
+
+! Upcasting - a type conversion operation, it goes from subclass to its parent (example: True and False belong to a class derived from the integer class, so they can be converted back to integers when needed)
+
+Reals (float) - real numbers (floating point numbers) are represented accorfing to the IEEE 754 double-precision binary floating-point format, stored in 64 bits of information, divided into three sections: sign, exponent and mantissa (for more info go to Wikipedia).
+Usually programming languages offer also single precision format (which takes 32 bits of memory), but not Python. Python supports only double precision.
+Sadly, floats are approximates to the closest representable number and even small numbers like 0.1, 0.3 suffer from this approximation.
+(3 * 0.1 - 0.3 = 5.551115123125783e-17, not 0)
+
+Complex numbers - it's possible to have real and imaginary part of number in Python
+
+Fractions - hold a rational numeraton and denominator in their lowest forms
+
+Decimals - should be uses when precision is everything, but it comes at a price in performance.
+Precision can be set by decimal.getcontext().prec.
+Creating decimals from floats, it takes all approximation issues. Creating decimals from ints or strings causes no problems and no strange behaviours.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
