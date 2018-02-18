@@ -1,0 +1,101 @@
+Fabrizio Romano "Learning Python"
+-------------------------------------
+
+
+Guido Van Rossum - Dutch computer scientist and mathematician, creator of Python.
+First Python release: 1991
+Name 'Python' is after British Monty Python group. It is rumored that IDLE name (Integrated DeveLopment Envifonment) is after Erik Idle, one of Monty Python's founders.
+
+
+Chapter 01
+
+Computer programming involves activities such as:
+* analysis,
+* developing understanding,
+* generating algorithms,
+* verification of requirements of algorithms (including their correctness and resources consumption),
+* implementation
+(based on Wikipedia)
+
+Objects are Python's abstraction for data. All data in a Python program is represented by objects or by relations between objects.
+(Python documentation)
+
+Three main features of objects: ID, type and value.
+
+Advantages of Python:
+* portability - work on each OS
+* coherence - you can guess the method's name most of the time, if you don't know it
+* developer productivity - less code than in other languages (like Java) to do the same job; also it doesn't need to be compiled to run program
+* extensive libraries
+* software qulity - focused on readability, coherence, uniformity; can be used as scripting language and oop
+* software integration - can be integrated with many, many other languages
+
+Virtual environment is a tool to create isolate Python environments, each of which is a folder that contains all the necessary executables to use the packages that a Python project would need.
+
+! We never work system-wide with Python!
+
+Virtual env: creating, activating, deactivating steps:
+* open console in chosen folder
+* find path to python bin file (which python3.5)
+* create venv (virtualenv -p /usr/bin/python3.5 .namevenv)
+* activate venv (source .namevenv/bin/activate)
+* you can check path to this particular python version just in case (which python) or just run python (python)
+* deactivate venv (deactivate)
+
+Ways of running Python:
+* as a script (script - files you execute to do something like a task)
+* as a proper software :)
+* as a GUI (Graphical User Interface)
+
+[Tk - graphical user interface toolkit. It's standard GUI for Tcl (Tool Command Language).]
+
+Organization of Python code:
+* files with .py extensions are Python modules
+* package is a folder with modules and special file __init__.py (that doesn't need to holdany code)
+
+! DRY principle - Don't Repeat Yourself :)
+! YOU SHOULD NEVER REPEAT THE SAME PIECE OF CODE MORE THAN ONCE IN YOUR APPLICATION
+
+Function - a block of organized, reusable code which is used to perform a task
+
+Library - a collection of functions and object that provide functionalities that enrich the abilities of a language
+
+Python's execution model
+
+Names: refer to objects, they are introduced by name binding operations
+(example: n = 5)
+
+Namespace: space to hold names; mapping from names to objects
+(example: built-in names with functions, global names in a module, local names in a function)
+
+Scopes: a textual region of a Python program, where a namespace is directly accessible (meaning that is a reference to a name is unqualified, Python tries to find it in the namespace)
+* local scope - the innermost one, contains local names
+* enclosing scope - scope of any enclosing function, contains non-local and non-global names
+* global - contains global names
+* built-in - contains built-in names
+The order of scopes when Python is looking for a name is as follows: local, enclosing, global, built-in (LEGB). Meaning that Python starts in the current namespace and then continues to the enclosing scope until built-in scope is searched.
+
+[TO READ: Classes section in Python tutorian in official documentation, paragraph about scoped and namespaces.]
+
+Class is something like abstract set of features and characteristics that together form something called bike. 
+Objects are instances of classes.
+
+Magic methods - every method that has leading and trailing double unserscore. They are used by Python for different purposes. This convention is like reserved only for Python.
+
+Writing good code
+
+PEP - Python Enhancement Proposal (PEP) process, it's the primary mechanism for proposing major new features, for collecting community input on an issue, and for documenting the design decisions that have gone into Python. Most famous one is PEP8
+
+[IDE TO TRY: Sublime Text editor]
+
+
+
+
+
+
+
+
+
+
+
+
