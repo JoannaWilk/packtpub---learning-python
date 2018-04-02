@@ -6,6 +6,8 @@ Guido Van Rossum - Dutch computer scientist and mathematician, creator of Python
 First Python release: 1991
 Name 'Python' is after British Monty Python group. It is rumored that IDLE name (Integrated DeveLopment Envifonment) is after Erik Idle, one of Monty Python's founders.
 
+Tim Peters - author of Python sorting algorithm, Timsort. He's also the author of 'The Zen of Python'!
+
 
 Chapter 02
 
@@ -47,12 +49,47 @@ Decimals - should be uses when precision is everything, but it comes at a price 
 Precision can be set by decimal.getcontext().prec.
 Creating decimals from floats, it takes all approximation issues. Creating decimals from ints or strings causes no problems and no strange behaviours.
 
+Immutable sequences: strings, tuples, bytes.
 
+Strings - immutable sequences of unicode code points
+Unicode code points can represent a character or for example formatting data
 
+Utf-8 - a variable length character encoding. It's capable of encoding all possible unicode code points
+Encode - encoding to bytes object
+Decode - decoding bytes object to the original
 
+Bytes object can be created by 'encode' method, but also by adding 'b' in front of a string declaration: b'string'.
 
+Tuple - sequence of arbitrary Python objects. Can be used inplicitly to set up multiple variables n one line, or to allow a function to return multiple different objects, etc.
+To create one element tuple there's comma needed to be put after the item: (1, ). Without it it's just item itself wrapped in braces.
+On assignment braces are optional, that is why belowed command will result in the same:
+my_tuple = 1, 2, 3
+my_tuple = (1, 2, 3).
 
+Mutable sequences: lists, byte arrays
 
+List - mutable sequence, similar to tuples but mutable
+
+! Tuples usually contain an heterogeneous sequence of elements.
+! Lists usually contain an homogeneous sequence of elements.
+
+Operator overloading - operators may represent different operations according to the context they are used in.
+
+Byte arrays - represented by bytearray type. It's mutable version of bytes object. Items in a bytearray type are integers between 0 (inclusive) and 256 (exclusive). They can be considered as mutable strings.
+
+Set types: set (mutable), frozenset (immutable). Unordered collections of immutable objects. Duplication of elements is not allowed.
+
+! Hashability - an object is hashable if it has a hash value which never changes during its lifetime. It allows an object to be used as a set member and as a key for a dictionary. Objects that compare equally must have the same hash value.
+
+Set - commonly used to test for membership, union, intersection, difference operations. 
+Frozenset - similar to set, but nothing can be added or removed (immutability).
+
+Mapping types: dictionaries
+
+Dictionary - mutable object, maps keys (need tobe hashable objects) to values (any type). There can be used keys(), values() and items(), which is (key, value) pairs.
+
+-> zip method is named after the real-life zip. it glues together two things taking one element from each at a time. It can be nicely use:
+list(zip('hello', range(1, 6))) -> [('h', 1), ('e', 2), etc.]
 
 
 
