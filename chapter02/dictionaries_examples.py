@@ -40,3 +40,55 @@ print("3 in d:", 3 in d)
 print("'e' in d:", 'e' in d)
 d.clear()
 print("d.clear(). d:", d)
+
+print("\n---------------------------\n")
+
+d = dict(zip('hello', range(5)))
+print("d = dict(zip('hello', range(5)))")
+print('d:', d)
+print('d.keys():', d.keys())
+print('d.values():', d.values())
+print('d.items():', d.items())
+print('3 in d.values():', 3 in d.values())
+print("('o', 4) in d.items():", ('o', 4) in d.items())
+
+print("\n---------------------------\n")
+
+print("d = dict(zip('hello', range(5)))")
+print('d:', d)
+print("d.popitem():", d.popitem())
+print('d:', d)
+print("d.pop('l'):", d.pop('l'))
+# this will cause an error
+# print("d.pop('not-a-key'):", d.pop('not-a-key'))
+d.update({'another': 'value'})
+d.update(a=13)
+print("d.update({'another': 'value'})")
+print("d.update(a=13)")
+print('d:', d)
+print("d.get('a'):", d.get('a'))
+print("if key 'a' is missing, return default value 177\n"
+      "d.get('a', 177):", d.get('a', 177))
+print("if key 'b' is missing, return default value 177\n"
+      "d.get('b', 177):", d.get('b', 177))
+print("d.get('b'):", d.get('b'))
+
+print("\n---------------------------\n")
+
+d = {}
+print("d = {}. d:", d)
+d.setdefault('a', 1)
+print("if key 'a' is missing, create it and set value 1\n"
+      "d.setdefault('a', 1). d:", d)
+print("if key 'a' is missing, create it and set value 5\n"
+      "d.setdefault('a', 5). d:", d)
+print("if a key exists it can not be overwritten with this method")
+
+print("\n---------------------------\n")
+
+print("test:")
+d = {}
+print("d = {}")
+d.setdefault('a', {}).setdefault('b', []).append(1)
+print("d.setdefault('a', {}).setdefault('b', []).append(1)")
+print("d:", d)
